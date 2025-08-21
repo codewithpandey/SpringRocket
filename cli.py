@@ -63,6 +63,15 @@ def create_service(service_name, docker, db, billing):
     if billing:
         render_template(f"{TEMPLATES_DIR}/BillingControllerTemplate.java",
                         f"{project_path}/BillingController.java", context)
+                        
+        # Testfiles for BillingController
+        render_template(f"{TEMPLATES_DIR}/BillingControllerTestTemplate.java",
+                        f"{test_path}/BillingControllerTest.java", context)
+    # Test files
+    render_template(f"{TEMPLATES_DIR}/ApplicationTestTemplate.java",
+                    f"{test_path}/ApplicationTest.java", context)
+    render_template(f"{TEMPLATES_DIR}/ControllerTestTemplate.java",
+                    f"{test_path}/ControllerTest.java", context)    
 
     # pom.xml
     render_template(f"{TEMPLATES_DIR}/pom.xml",
@@ -72,6 +81,10 @@ def create_service(service_name, docker, db, billing):
     if db:
         render_template(f"{TEMPLATES_DIR}/application.properties",
                         f"{resources_path}/application.properties", context)
+        # application-test.properties
+        render_template(f"{TEMPLATES_DIR}/application-test.properties",
+                        f"{test_resources_path}/application-test.properties", context)
+        
 
     # Dockerfile
     if docker:
