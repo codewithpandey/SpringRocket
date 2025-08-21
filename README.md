@@ -1,22 +1,16 @@
-# SpringRocket
+# SpringRocket 🚀 — Universal Microservice CLI
 A Python CLI tool to quickly scaffold Java Spring Boot microservices with optional Docker, PostgreSQL, and SaaS-ready billing endpoints. Perfect for small teams or open-source projects that want a working microservice boilerplate in seconds.
-
-Perfect! Since we now have a fully working CLI generator **“SpringRocket”** with correct Maven structure, Docker support, billing placeholders, and fully generated README for each service, here’s a **polished, updated `README.md` for your CLI repo**:
-
----
-
-# **Universal Microservice CLI — SpringRocket 🚀**
 
 **SpringRocket** is the name of this CLI because it lets you **launch Spring Boot microservices at rocket speed**.
 
-We wanted a name that captures the thrill of taking an idea and having a fully working microservice ready to run in **seconds**. With SpringRocket, you don’t wait — you scaffold, run, and see your service in action almost instantly. Think of it as your personal launchpad for microservices and SaaS-ready applications.
+I wanted a name that captures the thrill of taking an idea and having a fully working microservice ready to run in **seconds**. With SpringRocket, you don’t wait — you scaffold, run, and see your service in action almost instantly. Think of it as your personal launchpad for microservices and SaaS-ready applications.
 
 ---
 
 ## **Features**
 
 * Generate a **Spring Boot microservice** with REST endpoints
-* Fully **Maven-compliant project structure** (`src/main/java`, `src/main/resources`)
+* Fully **Maven-compliant project structure**
 * Optional **Dockerfile** for containerization
 * Optional **PostgreSQL DB config** (`application.properties`)
 * Optional **BillingController** with **Stripe/PayPal placeholders**
@@ -29,7 +23,7 @@ We wanted a name that captures the thrill of taking an idea and having a fully w
 ## **Installation**
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/codewithpandey/SpringRocket.git
 cd universal-microservice-cli
 python -m venv venv
 source venv/bin/activate       # Linux / macOS
@@ -60,9 +54,9 @@ python cli.py create-service UserService --docker --db --billing
 Generates `UserService` microservice in `services/UserService/` with:
 
 ```
-UserServiceApplication.java
-UserServiceController.java
-UserServiceBillingController.java ✅
+Application.java
+Controller.java
+BillingController.java ✅
 pom.xml
 src/main/resources/application.properties ✅
 Dockerfile ✅
@@ -74,19 +68,26 @@ README.md ✅
 ## **Generated Service Structure**
 
 ```
-services/UserService/
-├── pom.xml
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/example/UserService/
-│       │       ├── UserServiceApplication.java
-│       │       ├── UserServiceController.java
-│       │       └── UserServiceBillingController.java
-│       └── resources/
-│           └── application.properties
-├── Dockerfile
-└── README.md
+services
+└── UserService
+    ├── Dockerfile
+    ├── pom.xml
+    ├── README.md
+    └── src
+        ├── main
+        │   ├── java
+        │   │   └── com
+        │   │       └── example
+        │   │           ├── Application.java
+        │   │           ├── Controller.java
+        │   │           └── BillingController.java
+        │   └── resources
+        │       └── application.properties
+        └── test
+            ├── java
+            │   └── com
+            │       └── example
+            └── resources
 ```
 
 ---
@@ -139,13 +140,3 @@ SpringRocket uses **Jinja2 templates** stored in `templates/`. When you run `cre
 ## **License**
 
 MIT License — feel free to use, modify, and contribute.
-
----
-
-If you want, I can **also add some visual flair** with:
-
-* Badges (Python version, Docker build status)
-* A tiny **demo GIF** showing `docker run` in action
-* One-liner “wow” tagline for GitHub front page
-
-Do you want me to do that next?
