@@ -180,3 +180,45 @@ SpringRocket uses **Jinja2 templates** stored in `templates/`. When you run `cre
 ## **License**
 
 MIT License — feel free to use, modify, and contribute.
+
+---
+
+## **SpringRocket Trajectory / Orbit**
+
+SpringRocket is under active development! Here’s what’s done, what’s planned, and what’s on the horizon.
+
+### **Phase 1: Ignition & Launch Pad (Core CLI & Microservice Scaffold — ✅ Mostly Done**
+
+* ✅ Scaffold fully working Spring Boot microservice
+* ✅ Generate REST endpoints
+* ✅ Optional Stripe/PayPal billing placeholders
+* ✅ Docker-ready service
+* ✅ Auto-generated unit & integration tests with H2 DB
+* ⬜ Interactive CLI prompts for service name, package, DB, and features
+* ⬜ Basic CRUD scaffolding (Entity + Repository + Service + Controller)
+* ⬜ Swagger/OpenAPI integration for interactive API docs
+* ⬜ Multi-stage Dockerfile & optional Docker Compose
+
+### **Phase 2: Orbit Stabilization & Payload Deployment (SaaS & Advanced Features)**
+
+* ⬜ Subscription plan scaffolding
+* ⬜ Multi-tenant support
+* ⬜ Admin dashboard starter template
+* ⬜ CI/CD pipeline starter files (GitHub Actions / GitLab CI)
+* ⬜ Integration & load test templates
+
+### **Phase 3: Deep Space Exploration & Mission Control (Developer Experience & Observability)**
+
+* ⬜ Hot-reload templates with Spring DevTools
+* ⬜ Prometheus/Grafana metrics endpoints
+* ⬜ Logging & tracing (ELK, OpenTelemetry / Zipkin)
+* ⬜ Auto-generate README and Changelog for services
+* ⬜ Optional frontend boilerplate (React/Next.js)
+
+---
+
+**Notes:**
+
+* This roadmap is **a living document** — features may be added, updated, or reprioritized over time.
+* Contributions are **always welcome**! Feel free to fork, submit PRs, or suggest new features.
+* The goal is to make SpringRocket a **fast, production-ready microservice launcher** for small teams and solo developers.
